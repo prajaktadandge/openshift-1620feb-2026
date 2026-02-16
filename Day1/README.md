@@ -37,6 +37,7 @@
 - is an application virtualization technology
 - each application runs in a separate container
 - each container uses 5/8 namespaces
+- container are nothing but application process that runs in a separate namespace
 - all containers that runs on the same machines, share the OS Kernel and Hardware resources on the
   underlying Host OS
 - as containers doesn't expect dedicated hardware resources, this type of virtualization is considered

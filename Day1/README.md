@@ -212,3 +212,14 @@ docker images
 ```
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/e49d8eab-a58e-4628-bec3-1f17b51707ac" />
+
+
+## Lab - Deleting a docker image from local docker registry
+```
+docker images
+docker pull hello-world:latest
+docker images
+
+docker rmi hello-world:latest
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2897d7bd-74b3-4c73-abc1-699992d12131" />

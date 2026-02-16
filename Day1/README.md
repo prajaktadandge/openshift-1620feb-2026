@@ -297,3 +297,20 @@ docker start $(docker ps -aq)
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/76b9b445-6c45-4a4b-af81-5da07cc4f2e4" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5a577fc3-892b-452c-94a5-a261579ab36d" />
+
+## Lab - Restarting container
+
+Restart a container to force apply any config changes 
+```
+docker restart ubuntu1-jegan
+```
+
+Restart multiple containers
+```
+docker restart ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan
+```
+
+Restart all containers
+```
+docker restart $(docker ps -q)
+```

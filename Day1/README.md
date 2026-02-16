@@ -456,4 +456,6 @@ cat nginx.conf
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7f87bf37-7e7d-438a-b09b-2bf416d993ae" />
 
 You need to update the nginx.conf in your lb container as shown below
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c7ee51b4-f868-41de-8631-f5e561081226" />
+
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a1641707-e71f-45f1-8c58-95e3e3ff4e97" />

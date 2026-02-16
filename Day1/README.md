@@ -39,7 +39,7 @@
 <pre>
 - is an application virtualization technology
 - each application runs in a separate container
-- each container uses 5/8 namespaces
+- each container uses about 8 namespaces
 - container are nothing but application process that runs in a separate namespace
 - all containers that runs on the same machines, share the OS Kernel and Hardware resources on the
   underlying Host OS
@@ -145,6 +145,8 @@
 - each container represents a single application process
 - each container has its own network namespace
 - each container has its own pid namespace
+- each container has its own mnt namespace
+- each container has its own uts, ipc, user and cgroup namespaces
 </pre>
 
 ## Info - Docker Registry
@@ -254,3 +256,20 @@ ubuntu:latest - docker image with which we would like to create a container
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/97b0b6fc-e805-4f7f-8719-3f2805055451" />
 
+
+## Lab - Stopping container
+
+Stopping a single container
+```
+docker stop ubuntu1-jegan
+```
+
+Stopping multiple containers
+```
+docker stop ubuntu2-jegan ubuntu3-jegan
+```
+
+Stopping multiple containers without calling out their names
+```
+docker stop $(docker ps -q --name="ubuntu.*-jegan")
+```

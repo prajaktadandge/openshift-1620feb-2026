@@ -404,3 +404,4 @@ docker ps
 
 We are going to create a load-balancer setup something like below
 <img width="2968" height="2214" alt="image" src="https://github.com/user-attachments/assets/7122c6b7-5820-407e-bdf6-5bac55c5b40d" />
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/7122c6b7-5820-407e-bdf6-5bac55c5b40d" />

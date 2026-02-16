@@ -473,3 +473,46 @@ docker ps | grep lb-jegan
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2f909351-d1d7-4119-b264-bb8a8584f86b" />
 
+Let's find the location of index.html file within the nginx web servers
+```
+docker exec -it nginx1-jegan sh
+cd /usr/share/nginx/html
+cat index.html
+
+exit
+```
+
+Let's customize the web page on each nginx web servers to differentiate which webserver is responding
+```
+echo "Server 1" > index.html
+docker cp index.html nginx1-jegan:/usr/share/nginx/html/index.html
+
+echo "Server 2" > index.html
+docker cp index.html nginx2-jegan:/usr/share/nginx/html/index.html
+
+echo "Server 3" > index.html
+docker cp index.html nginx3-jegan:/usr/share/nginx/html/index.html
+```
+
+At this point, we are done with the lb setup. We need to test it now.
+
+You can test your web server responses directly
+```
+curl http://172.17.0.41:80
+curl http://172.17.0.43:80
+curl http://172.17.0.44:80
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ed9b7974-caa5-4120-a7e5-c8e99fe3c839" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/72cdab87-1b75-4af8-bfb6-e0a63ccb227a" />
+
+Open your web browser on your lab machine
+<pre>
+http://localhost:8080
+http://localhost:8080
+http://localhost:8080
+</pre>
+
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b4994ae0-0a43-4180-b254-4edb68adae16" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f6a4f294-a8e9-422b-bcfc-b49c49e25c99" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1c00c53d-dbf0-4cc2-9d26-c1f528549e91" />

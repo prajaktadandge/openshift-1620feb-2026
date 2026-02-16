@@ -141,7 +141,7 @@
 <pre>
 - is a running instance of a Docker image
 - in order to create a Docker container, the respective Docker image must be present in the local docker registry
-- typically in Linux, local registry folder will be /var/lib/docker
+- typically in Linux, local registry folder will be /var/EXPOSE 80lib/docker
 - each container represents a single application process
 - each container has its own network namespace
 - each container has its own pid namespace
@@ -399,3 +399,8 @@ docker ps
 ```
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/366a8bf6-f66c-44c7-b386-5e3584945035" />
+
+## Lab - Setting up a Load Balancer with nginx
+
+We are going to create a load-balancer setup something like below
+<img width="2968" height="2214" alt="image" src="https://github.com/user-attachments/assets/7122c6b7-5820-407e-bdf6-5bac55c5b40d" />

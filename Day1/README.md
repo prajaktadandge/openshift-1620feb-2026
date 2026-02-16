@@ -103,7 +103,10 @@
 - this is similar to Window12OS.iso, RHEL-os.iso
 - with a Docker Image, we can create any number of containers
 - application + all dependent libraries + any dependencies => bundled => docker image
+- each image will have one or more image layers
+- image layers can be shared by multiple images
 </pre>
+![Docker](DockerLayers.png)
 
 ## Info - Linux Namespaces
 <pre>

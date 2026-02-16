@@ -348,3 +348,20 @@ docker start ubuntu1-jegan
 docker ps | grep jegan
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c617008b-c6c8-4777-af92-1a03169c7e64" />
+
+## Lab - Finding container details
+```
+docker inspect ubuntu1-jegan
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8db76f16-2ea2-468b-a58b-3ce735765cb4" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/70a390a7-90e3-4bc1-8295-d45f09cdcc2a" />
+
+
+## Lab - Retrieving IP address of a docker container
+```
+docker inspect ubuntu1-jegan | grep IPA
+
+docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} ubuntu1-jegan
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bdc6e614-26d4-4b7a-8501-028640fc3e5b" />

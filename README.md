@@ -13,5 +13,5 @@ Note
 - While registering for Pre-test, kindly provide your full firstname and lastname
 - Do not share your BOFA email while registering for the pre-test
 - Once you completed the pre-test, kindly notify 
-- Copy/Paste between the lab machine and your local machine is disabled as per your bank policy
+- Copy/Paste between the lab machine and your local machine may be disabled as per your bank policy
 </pre>

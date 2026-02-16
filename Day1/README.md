@@ -50,5 +50,26 @@
     - example
       - we can restrict how much CPU a particular container can utilize at the max
       - we can restrict how much RAM a particular container can utilize at the max
+</pre>
 
+## Info - Container Runtime
+<pre>
+- is a low-level software, that helps us manage containers and container images
+- container runtimes, depends on the Linux Kernel namespaces, Control Groups to supports containers
+- it is not so user-friendly, hence they are not used by end-users like us
+- examples
+  - runC 
+  - cRun
+  - CRI-O
+</pre>
+
+## Info - Container Engine
+<pre>
+- is a high-level software, that helps us manage containers and container images
+- container engines, depends on Container Runtimes to manage containers and container images
+- it is very user-friendly, hence almost all end-users only are aware of Container Engines
+- examples
+  - Docker 
+  - Podman
+  - Containerd
 </pre>

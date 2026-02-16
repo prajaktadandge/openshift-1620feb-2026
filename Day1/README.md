@@ -460,3 +460,16 @@ You need to update the nginx.conf in your lb container as shown below
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a1641707-e71f-45f1-8c58-95e3e3ff4e97" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/6de33aab-9d7f-480f-b68d-7534f6003ffe" />
+
+We need to configure the lb container with the updated nginx.conf file
+```
+cd ~
+cat nginx.conf
+docker cp nginx.conf lb-jegan:/etc/nginx/nginx.conf
+
+docker restart lb-jegan
+
+docker ps | grep lb-jegan
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2f909351-d1d7-4119-b264-bb8a8584f86b" />
+

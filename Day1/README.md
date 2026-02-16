@@ -365,3 +365,22 @@ docker inspect ubuntu1-jegan | grep IPA
 docker inspect -f {{.NetworkSettings.Networks.bridge.IPAddress}} ubuntu1-jegan
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/bdc6e614-26d4-4b7a-8501-028640fc3e5b" />
+
+## Lab - Getting inside a container shell
+```
+docker ps | grep ubuntu1-jegan
+docker exec -it ubuntu1-jegan /bin/bash
+
+hostname
+hostname -i
+
+ifconfig
+
+apt update && apt install -y net-tools iputils-ping
+
+ifconfig
+ping 8.8.8.8
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/72c2a9db-4dbc-43fd-98eb-5221119d8674" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c7cf2a9d-a96d-4bfd-ad7a-4cc1765ebb01" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8dc0e46e-c37f-4f0e-abf8-e28db9dcdb22" />

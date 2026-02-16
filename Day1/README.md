@@ -516,3 +516,21 @@ http://localhost:8080
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b4994ae0-0a43-4180-b254-4edb68adae16" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/f6a4f294-a8e9-422b-bcfc-b49c49e25c99" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1c00c53d-dbf0-4cc2-9d26-c1f528549e91" />
+
+## Lab - Building a custom docker image with our application binary
+```
+cd ~
+git clone https://github.com/tektutor/spring-ms.git
+cd spring-ms
+cat Dockerfile
+
+docker images | grep hello-microservice
+docker build -t tektutor/hello-microservice:1.0 .
+docker images | grep hello-microservice
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1d544adc-26d5-462d-8176-060a3896b789" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2876fc38-2e08-4a4e-a899-98df9173af65" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ffe8b78f-2f58-456a-83ba-8d831a7e66ac" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9a53666e-9bd3-4b00-b5b4-78046500ac01" />
+

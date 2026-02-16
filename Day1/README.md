@@ -446,3 +446,11 @@ For detailed nginx lb configuration, you may refer
 https://nginx.org/en/docs/http/load_balancing.html  
 </pre>
 
+Let's copy the nginx.conf file from lb container
+```
+cd ~
+docker cp lb-jegan:/etc/nginx/nginx.conf .
+cat nginx.conf
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/0246c558-5d93-4183-a589-8270b0c5c043" />
+

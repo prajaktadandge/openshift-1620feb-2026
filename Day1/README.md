@@ -78,3 +78,16 @@
 </pre>
 
 ## Info - Docker Overview
+<pre>
+- Docker Container Engine is developed in Golang by a company called Docker Inc
+- Docker comes in 2 flavours
+  1. Docker Community Edition - Docker CE ( opensource )
+  2. Docker Enteprise Edition - Docker EE ( commercial product that comes with Support )
+- Docker follows Client/Server Architecture
+- Client tool is docker
+- The Server is dockerd, that runs as a service in the background
+</pre>
+
+## Info - Docker High-Level Architecture
+![Docker](docker-architecture.jpg)
+![Docker](DockerHighLevelArchitecture.png)

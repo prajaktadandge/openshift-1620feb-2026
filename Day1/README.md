@@ -314,3 +314,22 @@ Restart all containers
 ```
 docker restart $(docker ps -q)
 ```
+
+## Lab - Deleting containers
+
+Delete a single running container gracefuly
+```
+docker stop ubuntu1-jegan
+docker rm ubuntu1-jegan
+docker ps
+```
+
+Delete multiple containers
+```
+docker stop ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan && docker rm ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan
+```
+
+Delete multiple containers forcibly ( You will end up deleting containers created by others too so think twice )
+```
+docker rm -f $(docker ps -aq)
+```

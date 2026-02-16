@@ -235,5 +235,16 @@ docker run -dit --name ubuntu3-jegan --hostname ubuntu3-jegan ubuntu:latest /bin
 # List all currently running containers
 docker ps
 ```
+
+Note
+<pre>
+run - will create and start the container
+dit - deattached interactive terminal
+name - is used on the docker level to manage docker containers
+hostname - is used on the OS level as an alternate to IP addresses
+ubuntu:latest - docker image with which we would like to create a container 
+/bin/bash - we would like run a bash terminal as the default application once the container starts running
+</pre>
+
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/97b0b6fc-e805-4f7f-8719-3f2805055451" />
 

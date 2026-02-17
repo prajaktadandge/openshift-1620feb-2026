@@ -323,3 +323,20 @@ oc get pods -w
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b5d01552-d3af-444c-8690-fa8f91ac5f09" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/48076d33-9687-4997-8766-10beee8ceb43" />
+
+
+Scale up the pods
+```
+oc scale deploy/nginx --replicas=5
+oc get pods
+```
+
+Scale down the pod count
+```
+oc scale deploy/nginx --replicas=3
+oc get pods
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/956625ee-264e-4f4e-8c39-600afa08e1fe" />
+
+

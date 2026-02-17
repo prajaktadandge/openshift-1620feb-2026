@@ -23,6 +23,7 @@
 ## Info - Docker SWARM
 <pre>
 - Docker Inc's native Container Orchestration Platform
+- it is opensource product
 - It only supports application containerized using Docker
 - it is very lightweight and user-friendly
 - ideal for learning
@@ -34,6 +35,7 @@
 ## Info - Kubernetes
 <pre>
 - Kubernetes is developed in Golang by Google
+- it is opensource
 - it is user-friendly and robust
 - can be installed in laptops with low-end or every high-end configurations
 - even can be installed on Raspberry Pi
@@ -47,6 +49,11 @@
 - Kubernetes as a cluster of many servers ( Virtual Machines or Physical Machines with any Linux Distro )
 - there are 2 types of Nodes(Servers) in Kubernetes
   1. Master Node 
+     - Control Plane components runs here
+       1. API Server
+       2. etcd key/value database (distributed database - works as a cluster )
+       3. scheduler
+       4. Controller Managers ( collection of many controllers )
   2. Worker Node
 - Kuberentes support many different type of Container Runtime/Engines
   - Docker
@@ -57,7 +64,44 @@
 - Kubernetes supports CRI ( Container Runtime Interface )
   - any Container Runtime that implements the CRI are supported by Kubernetes
   - Kubernetes interacts with Container Runtimes via the common CRI
+- Kubernetes supports only Command-line, doesn't support production-grade webconsole
+- Kubernetes provides basic build block to extend it further
+  - we can add Custom resource by creating a Custom Resource Definition (CRDs)
+  - To manage your Custom resource, you also need to provide Custom Controller
+  - this kind of extensions are normally packaged in the form of Kubernetes Operators
+- Kubernetes deploying application with container images
+- Kubernetes Operators
+  - is a collection of many Custom Resources with Custom Controllers
+  - one can develop Operators with Operator SDK
+    - Ansible Playbook ( equally powerful )
+    - Helm Package Manager 
+    - Golang ( most preferred ) 
+- Kuberentes allows exposing application for
+  - internal use via ClusterIP Service
+  - external use via NodePort, LoadBalancer Service
 </pre>    
+
+## Info - Red Hat Openshift
+<pre>
+- it is developed on top of Google Kuberenetes
+- in other words, Red Hat Openshift is a Red Hat's distribution of Kubernetes with many additional features
+- comes with world-wide support from Red Hat ( an IBM company )
+- Using the Kubernetes extensions ( Operators ), Openshift team has added many additional useful features
+  - Web Console (GUI)
+  - User Management
+  - DeploymentConfig (deprecated in recent version)
+  - Route ( a way to expose your applications to end-users using public url )
+    - doesn't cost anyway, as it works like LoadBalancer but uses native openshift implementions
+    - internally it uses Kubernetes Ingress
+  - S2I ( Source to Image )
+    - in addition to deploy application from container images, 
+      applications can also be deployed from source code present in GitHub, GitLab, BitBucket, etc.,
+    - Build, BuildConfig ( additional resources they added in Openshift )
+- also supports Serverless declarative CI/CD Framework Tekton
+- Tekton is knative (Kubernetes Native project that supports CI/CD in K8s/Openshift )
+- Openshift supports all Kuberenetes Service
+  - and Route
+</pre>
 
 ## Info - Creating and Managing Users,Groups in OpenShift
 <pre>

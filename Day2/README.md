@@ -223,5 +223,20 @@ oc describe node worker01.ocp4.palmeto.org
 - this is not a Pod
 - this runs as a Service in every node ( master and worker nodes )
 - this interacts with CRI-O Container Runtime to pull, create and manage containers
-
+- this is also called as Kubelet Container Agent
 </pre>
+
+## Demo - Getting inside a node 
+```
+oc debug node/worker01.ocp4.palmeto.org
+chroot /host
+hostname
+hostname -i
+ls
+
+podman version
+crictl version
+crictl images
+
+crictl ps
+```

@@ -246,6 +246,7 @@ In the command below, replace 'jegan' with your name
 ```
 oc new-project jegan
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/73255e9f-5f77-4295-b4cd-bd8ddfd528b9" />
 
 List all projects
 ```
@@ -255,7 +256,7 @@ oc get project
 
 Find more details about a project
 ```
-oc describe jegan
+oc describe project/jegan
 ```
 
 Switching between projects

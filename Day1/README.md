@@ -1,4 +1,4 @@
-# Day 1
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/927f8917-21b0-4bf8-9444-866d973621a1" /># Day 1
 
 ## Info - Hypervisor Overview
 <pre>
@@ -535,3 +535,59 @@ docker images | grep hello-microservice
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ffe8b78f-2f58-456a-83ba-8d831a7e66ac" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9a53666e-9bd3-4b00-b5b4-78046500ac01" />
 
+## Lab - Volume mounting
+Let's create a mysql db server. When mariadb prompts for password type root@123 as password.
+```
+docker run -d --name mysql-jegan --hostname mysql-jegan -e MYSQL_ROOT_PASSWORD=root@123 -v /tmp/jegan/mysql:/var/lib/mysql mariadb:latest /bin/sh
+docker ps
+
+docker exec -it mysql-jegan sh
+mariadb -u root -p
+SHOW DATABASES;
+CREATE DATABASE tektutor;
+USE tektutor;
+SHOW TABLES;
+CREATE TABLE trainings ( id INT NOT NULL, name VARCHAR(100) NOT NULL, duration VARCHAR(100) NOT NULL, PRIMARY KEY(id));
+
+INSERT INTO trainings VALUES ( 1, "DevOps", "5 Days" );
+INSERT INTO trainings VALUES ( 2, "Linux Device Drivers", "5 Days" );
+SELECT * FROM trainings;
+exit
+exit
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/36708e60-909e-4400-8025-4337d1aac4df" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/27b4be53-6c6c-4b59-915d-294fb23e9d80" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/38da1ce1-97e8-49a4-aded-8f0f1b927651" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3651bf3e-7c97-4232-8e23-d9a941fd720d" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/aac65ce5-9af8-4ccf-af3b-fa5f58bafcf6" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/550174ee-075b-4165-9b03-28d612cc8437" />
+
+
+Let's remove the mysql-jegan container forcibly
+```
+docker rm -f mysql-jegan
+```
+
+Let's create a new mysql container
+```
+docker run -d --name mysql-jegan --hostname mysql-jegan -e MYSQL_ROOT_PASSWORD=root@123 -v /tmp/jegan/mysql:/var/lib/mysql mariadb:latest /bin/sh
+docker ps
+
+docker exec -it mysql-jegan sh
+mariadb -u root -p
+SHOW DATABASES;
+USE tektutor;
+SHOW TABLES;
+SELECT * FROM trainings;
+exit
+exit
+```
+
+Let's see if the database and tables are stored on our lab server
+```
+ls -l /tmp/jegan/mysql
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/cd66d45f-5f89-4111-8972-c32162eedc75" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/21b1c6ca-1966-4b3b-83af-47f42bab8973" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5baca400-8d06-49af-8021-93a312e6ca18" />

@@ -141,7 +141,7 @@
 <pre>
 - is a running instance of a Docker image
 - in order to create a Docker container, the respective Docker image must be present in the local docker registry
-- typically in Linux, local registry folder will be /var/EXPOSE 80lib/docker
+- typically in Linux, local registry folder will be /var/lib/docker
 - each container represents a single application process
 - each container has its own network namespace
 - each container has its own pid namespace

@@ -364,3 +364,24 @@ oc describe pod/nginx-675c65fdcb-d9k4k
 oc get pods -o wide
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/de92f29c-a14b-4452-ba74-4912ca5eed67" />
+
+## Lab - Understand Pod Subnet allocated for each node
+```
+oc project jegan
+oc scale deploy/nginx --replicas=25
+
+oc get pods -o wide | grep master01
+oc get pods -o wide | grep master02
+oc get pods -o wide | grep master03
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/38072042-3c4a-4a0a-b8e7-fa11932045b1" />
+
+Similarly, let's check the Pod Subnet for the worker nodes
+```
+oc get pods -o wide | grep worker01
+oc get pods -o wide | grep worker02
+oc get pods -o wide | grep worker03
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/2b265833-36d3-4960-ba47-27869b6bbc01" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/15b29b90-70b5-4251-b240-0f92d7ce3099" />

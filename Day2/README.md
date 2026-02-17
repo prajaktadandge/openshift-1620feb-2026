@@ -112,6 +112,13 @@
 - oauth server can be configured to use identify providers such as htpasswd, LDAP, GitLab, etc.,  
 </pre>
 
+## Info - Kubernetes High-Level Architecture
+![Kubernetes](KubernetesArchitecture2.png)
+
+## Info - Red Hat Openshift High-Level Architecture
+![Openshift](openshiftArchitecture.png)
+![Openshift](master-node.png)
+
 ## Demo - Installing htpassword utility in Ubuntu
 ```
 sudo apt install -y apache2-utils

@@ -281,6 +281,9 @@ oc project jegan
 ```
 oc project jegan
 
+# Find the image present in your openshift cluster
+oc get imagestreams -n openshift | grep nginx
+
 # Server 1
 oc create deployment nginx --image=default-route-openshift-image-registry.apps.ocp4.palmeto.org/openshift/nginx:1.29 --replicas=3
 

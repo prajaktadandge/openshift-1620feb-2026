@@ -276,3 +276,15 @@ Switch back to your project
 ```
 oc project jegan
 ```
+
+## Lab - Let's deploy our first stateless application into Openshift within your project
+```
+oc project jegan
+
+# Server 1
+oc create deployment nginx --image=default-route-openshift-image-registry.apps.ocp4.palmeto.org/openshift/nginx:1.29 --replicas=3
+
+# Server 2
+oc create deployment nginx --image=default-route-openshift-image-registry.apps.ocp4.palmeto.org/openshift/nginx:1.30 --replicas=3
+```
+

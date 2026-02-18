@@ -23,6 +23,8 @@ cat /tmp/htpasswd
 htpasswd -Bb /tmp/htpasswd jegan-dev dev@123
 cat /tmp/htpasswd
 
+cat ~/openshift.txt
+
 oc login $(oc whoami --show-server) -u kubeadmin -p xkHzc-Pv36w-NcB5W-EwAd3 --insecure-skip-tls-verify=true
 
 oc create secret generic htpasswd-secret --from-file htpasswd=/tmp/htpasswd -n openshift-config

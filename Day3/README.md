@@ -401,3 +401,17 @@ affinity:
           values:
           - qa
 ```
+
+## Info - Getting used to Red Hat Openshift Webconsole
+In the terminal run the below command
+```
+oc whoami --show-console
+```
+
+Open the webconsole url
+```
+https://console-openshift-console.apps.ocp4.palmeto.org
+```
+
+Red Hat Openshift Webconsole presents you a overview as shown below
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8f2fa4db-4502-4e74-a314-49f1af05838c" />

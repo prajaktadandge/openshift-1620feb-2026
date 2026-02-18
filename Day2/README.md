@@ -101,7 +101,7 @@
   - comes with an Internal Image Registry that can be accessed by all nodes in Openshift to push/pull container images
 - also supports Serverless declarative CI/CD Framework Tekton
 - Tekton is knative (Kubernetes Native project that supports CI/CD in K8s/Openshift )
-- Openshift supports all Kuberenetes Service
+- Openshift supports all Kubernetes Service
   - and Route
 </pre>
 

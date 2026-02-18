@@ -243,10 +243,13 @@ Configure TLS
 ldapmodify -Y EXTERNAL -H ldapi:/// -f tls.ldif
 ```
 
-Enable LDAPS in slapd, edit the /etc/sysconfig/slapd
+Enable LDAPS in slapd, edit the /etc/default/slapd
 ```
 SLAPD_URLS="ldap:/// ldapi:/// ldaps:///"
 systemctl restart slapd
+systemctl status slapd
+sudo ss -tulnp | grep 636
+sudo journalctl -xe | grep slapd
 ```
 
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9b7b181c-5406-4e5a-8ceb-eaf93b21dd44" />

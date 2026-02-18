@@ -58,6 +58,7 @@ oc get pods
 oc get svc
 oc get nodes
 oc whoami
+cat ~/openshift.txt
 oc login $(oc whoami --show-server) -u kubeadmin -p xkHzc-Pv36w-NcB5W-EwAd3 --insecure-skip-tls-verify=true
 oc adm policy add-cluster-role-to-user cluster-admin jegan-admin
 oc login -u jegan-admin -p admin@123

@@ -15,6 +15,8 @@ sudo apt install -y apache2-utils
 
 ## Lab - Creating and Managing Users,Groups in OpenShift 
 ```
+# This must be used only the first time, since I have already created you don't run this command
+# If you run this command by mistake, it is going to delete all the other users
 htpasswd -cBb /tmp/htpasswd jegan-admin admin@123
 cat /tmp/htpasswd
 
@@ -26,6 +28,8 @@ oc login $(oc whoami --show-server) -u kubeadmin -p xkHzc-Pv36w-NcB5W-EwAd3 --in
 oc create secret generic htpasswd-secret --from-file htpasswd=/tmp/htpasswd -n openshift-config
 oc get oauth cluster -o yaml > oauth.yml
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d424a405-b923-4d04-97d9-08f9461d3b5b" />
+
 
 Edit the oauth.yml
 <pre>

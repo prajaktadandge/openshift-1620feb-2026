@@ -89,6 +89,7 @@
 - Using the Kubernetes extensions ( Operators ), Openshift team has added many additional useful features
   - Web Console (GUI)
   - User Management
+  - Project ( developed on top of Kubernetes Namespace with access policy )
   - DeploymentConfig (deprecated in recent version)
   - Route ( a way to expose your applications to end-users using public url )
     - doesn't cost anyway, as it works like LoadBalancer but uses native openshift implementions

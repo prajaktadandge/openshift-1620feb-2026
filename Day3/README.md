@@ -202,7 +202,7 @@ spec:
       bindPassword:
         name: ldap-secret
       insecure: true
-      url: "ldap://192.168.10.200:389/ou=people,dc=palmeto,dc=org?uid"
+      url: "ldap://192.168.10.200:389/ou=people,dc=palmeto,dc=org?uid/sub"
 ```
 
 Create LDAP bind password secret

@@ -76,7 +76,7 @@
     - Ansible Playbook ( equally powerful )
     - Helm Package Manager 
     - Golang ( most preferred ) 
-- Kuberentes allows exposing application for
+- Kubernetes allows exposing application for
   - internal use via ClusterIP Service
   - external use via NodePort, LoadBalancer Service
 </pre>    

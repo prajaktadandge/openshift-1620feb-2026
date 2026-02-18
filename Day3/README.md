@@ -96,7 +96,7 @@ oc get users
 oc login -u jegan-developer -p developer@123
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/87e7c012-a1da-4b94-a344-1bc0825bb238" />
-![Uploading image.png…]()
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3493cd7b-6b05-44ad-9d5f-985c779c0639" />
 
 
 ## Info - OpenLDAP 
@@ -213,10 +213,49 @@ oc create secret generic ldap-secret \
   -n openshift-config
 ```
 
+Let's enable LDAPS(636) in OpenLDAP
+Generate self-signed certificate
+```
+mkdir -p /etc/ldap/certs
+
+openssl req -new -x509 -nodes -days 365 \
+-out /etc/ldap/certs/ldap.crt \
+-keyout /etc/ldap/certs/ldap.key
+
+ls /etc/ldap/certs/
+
+chown -R openldap:openldap /etc/ldap/certs
+```
+
+Create a tls.ldif
+<pre>
+dn: cn=config
+changetype: modify
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/ldap/certs/ldap.crt
+-
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/ldap/certs/ldap.key  
+</pre>
+
+Configure TLS
+```
+ldapmodify -Y EXTERNAL -H ldapi:/// -f tls.ldif
+```
+
+Enable LDAPS in slapd, edit the /etc/sysconfig/slapd
+```
+SLAPD_URLS="ldap:/// ldapi:/// ldaps:///"
+systemctl restart slapd
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9b7b181c-5406-4e5a-8ceb-eaf93b21dd44" />
+
+
 Create LDAP server certificate
 ```
 # Get LDAP server certificate
-openssl s_client -connect your-ldap-server:636 -showcerts < /dev/null 2>/dev/null | openssl x509 -outform PEM > ldap-ca.crt
+openssl s_client -connect 192.168.10.200:636 -showcerts < /dev/null 2>/dev/null | openssl x509 -outform PEM > ldap-ca.crt
 
 # Create configmap
 oc create configmap ldap-ca \

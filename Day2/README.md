@@ -11,7 +11,7 @@
 - Performs load-balancing
 - Supports Scheduling
 - Supports self-healing
-- Supports caling
+- Supports scaling
 - Supports Service Discovery
   - Containerized applications finds and talks to each other reliably irrespective of where they are running
 - examples

@@ -95,6 +95,9 @@ oc delete user jegan-developer
 oc get users
 oc login -u jegan-developer -p developer@123
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/87e7c012-a1da-4b94-a344-1bc0825bb238" />
+![Uploading image.png…]()
+
 
 ## Info - OpenLDAP 
 <pre>

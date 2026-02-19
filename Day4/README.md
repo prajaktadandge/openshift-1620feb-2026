@@ -331,6 +331,21 @@ docker login -u $(oc whoami) -p $(oc whoami -t) default-route-openshift-image-re
 ```
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d2c02eb9-90d6-4083-a7fe-7a2d0a6f5f30" />
 
+## Lab - Importing image from Docker Hub into Openshift Internal Registry
+```
+oc project jegan
+oc get imagestreams
+oc get imagestream
+oc get is
+
+oc import-image nginx:1.26 \
+--from=docker.io/bitnamilegacy/nginx:1.29 \
+--confirm
+```
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3c9a9391-e48b-4f58-97dc-e173c5b824ef" />
+
+
 ## Lab - Configuring certain Openshift nodes for QA, Dev use
 
 Let's list all nodes

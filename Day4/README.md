@@ -24,6 +24,23 @@ curl http://hello-jegan.apps.ocp4.palmeto.org
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ef19ce3a-9834-48ea-bf06-a7715bd4e4b0" />
 
 
+## Lab - Creating an external nodeport service
+```
+oc project jegan
+oc delete svc/hello
+
+# Create an external nodeport service for hello deployment
+oc expose deploy/hello --port=8080 --type=NodePort
+oc get svc
+
+## Accessing the node port service externally
+oc get nodes -o wide
+curl http://
+```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8bcdd013-324d-4ecb-8b14-2b910d634c24" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/13e8a1a9-3a17-4376-8810-510370c9bc23" />
+
+
 ## Lab - Creating an user group, add users to group, restrict access to project
 
 Let's login as administrator

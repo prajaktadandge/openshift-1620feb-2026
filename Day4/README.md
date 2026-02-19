@@ -72,6 +72,48 @@ Note
 </pre>
 ![Openshift](openshift-internals.png)
 
+## Info - DaemonSet
+<pre>
+- DaemonSet is managed by DaemonSet Controller
+- DaemonSet Controller detects the total number of nodes available in the cluster and it will create that many Pods automatically
+- each Pod will scheduled on one of the nodes 
+- this is not used in normal scenarios
+- For instance, 
+  - to collect performance metrics, there has to be one Prometheus Pod running in each node
+  - in this kind of scenario, one can use DaemonSet
+</pre>
+
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/c9d18180-d5c8-4324-91e3-006a1380e7cb" />
+
+## Info - Job
+<pre>
+- any one time activity, we can run as Job
+- the activity may run sometime and then it might complete, such application can be deployed as a Job in Kubernetes/Openshift
+</pre>
+
+## Info - CronJob
+<pre>
+- any activity that must be schedule to run a particular day particular time
+- this must be repeated daily, weekly or monthly or yearly then it can be deployed as a CronJob
+</pre>
+
+## Info - StatefulSet
+<pre>
+- this is used to deploy stateful applications
+- if you wish to deploy a cluster of db server Pod
+- assume you wish to create 3 mysql Pods which runs as a cluster
+  - ie. when a particular table record is updated in one instance of mysql Pod
+  - it automatically syncs with other 2 instances
+- StatefulSet Controller guarantees 
+  - each Pod that is created for StatefulSet is guaranteed to have a stable name
+  - For instance, assuming the statefulset name is mysql then the first Pod will be named mysql-0, 
+    the second Pod will be named mysql-1 and so on
+  - Even if the mysql-0 Pod or any Pod in Statefulset get deleted the new mysql Pod is assigned the same sticky name
+- First mysql-0 Pod behaves like a Master mysql server
+  - here read/write is allowed
+- Second and Third instance i.e mysql-1 and mysl-2 can be created as a ready-only database
+- Second instance will get synchronized pulling updates from mysql-1 and then it will let the mysql-2 get synchronized from mysql-1
+</pre>
 
 ## Lab - Creating an user group, add users to group, restrict access to project
 

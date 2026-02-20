@@ -6,6 +6,6 @@ COPY . .
 RUN npm run build
 
 FROM bitnamilegacy/nginx:1.29
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app/build /app
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]

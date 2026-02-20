@@ -1,20 +1,5 @@
 # Advanced Red Hat Openshift Administration Training 16-20 Feb 2026
 
-## Pre test url
-<pre>
-https://forms.cloud.microsoft/r/4jrVvgPWrF  
-</pre>
-
-Note
-<pre>
-- Kindly login to Cloud Machine
-- Complete the pre-test from Lab machine ( GitHub and Test url may not be accessible on your work machine )
-- While registering for Pre-test, kindly provide your full firstname and lastname
-- Do not share your BOFA email while registering for the pre-test
-- Once you completed the pre-test, kindly notify 
-- Copy/Paste between the lab machine and your local machine may be disabled as per your bank policy
-</pre>
-
 ## Server 1 ( 192.168.10.200 )
 
 #### Hardware Configuration

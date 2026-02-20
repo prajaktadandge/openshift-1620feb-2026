@@ -5,6 +5,18 @@
 
 ```
 
+## Lab - Deploying ReactJS Application from CLI
+```
+```
+
+## Info - Installing NFS Server in Ubuntu
+```
+sudo apt install -y nfs-kernel-server
+sudo systemctl start nfs-kernel-server.service
+sudo apt install -y nfs-common
+sudo systemctl restart nfs-kernel-server
+sudo systemctl enable nfs-kernel-server
+```
 
 ## Info - Openshift Network Policy
 <pre>

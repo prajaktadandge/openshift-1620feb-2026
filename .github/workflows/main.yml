@@ -1,0 +1,36 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install pandoc & LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex
+
+      - name: Combine Markdown Files
+        run: |
+          find . -type f -name "*.md" ! -path "./.git/*" > files.txt
+          cat $(cat files.txt) > combined.md
+
+      - name: Generate PDF
+        run: |
+          pandoc combined.md -o openshift-course.pdf \
+            --pdf-engine=xelatex \
+            --toc \
+            --number-sections
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openshift-course-pdf
+          path: openshift-course.pdf

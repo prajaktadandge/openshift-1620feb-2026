@@ -48,6 +48,11 @@ oc logs -f bc/reactjs-app
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b029f865-f30a-4489-9672-0431e3bc442e" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7bbc921e-3ac7-4e37-8edd-0b2415a75268" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b0b68905-a450-426e-8659-bdb24626e8b2" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/8a42cacc-940c-4046-a115-43e473c59560" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9ff5fb94-8963-431a-a2ec-8b898df3f756" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/9a3388dc-341d-4500-8f30-3ab8d8367c4a" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/d4865b33-30c0-4f6e-acb7-aec3926593d7" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/5eab9d8f-6101-42c2-aa43-dbf21c5c722b" />
 
 ## Info - Installing NFS Server in Ubuntu
 ```

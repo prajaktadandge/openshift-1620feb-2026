@@ -1,0 +1,24 @@
+# 1. Deny all ingress by default (blocks cross-namespace unless explicitly allowed)
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  ingress: []               # ← intentionally empty = deny everything
+
+---
+# 2. Then explicitly re-allow same-namespace communication
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-same-namespace
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector: {}

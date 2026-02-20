@@ -1,0 +1,30 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install pandoc & TexLive
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-full
+
+      - name: Generate combined Markdown
+        run: |
+          find . -type f \( -name "*.md" \) > files.txt
+          cat $(cat files.txt) > combined.md
+
+      - name: Build PDF
+        run: pandoc combined.md -o course.pdf --pdf-engine=xelatex --toc
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: openshift-course
+          path: course.pdf

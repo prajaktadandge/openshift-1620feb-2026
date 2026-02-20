@@ -1,5 +1,12 @@
 # Day 5
 
+## Lab - Cloning TekTutor Training Repository ( In case you haven't done already )
+```
+cd ~
+git clone https://github.com/tektutor/openshift-1620feb-2026.git
+cd openshift-1620feb-2026
+```
+
 ## Lab - Deploying NodeJS Application from Openshift Webconsole
 ```
 

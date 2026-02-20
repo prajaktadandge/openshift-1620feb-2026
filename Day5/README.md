@@ -200,4 +200,5 @@ Let's see if we delete the deny incoming traffic network policy, if we are able 
 ```
 oc delete -f deny-all-incoming-traffic.yml
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/1bdafacb-3642-4aca-8067-b6a15d790bc0" />
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a3032534-1b4c-4d92-bb2d-45c65bfb5261" />

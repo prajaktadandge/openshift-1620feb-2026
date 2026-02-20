@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysql
+  name: mysql-primary-0-service"   # ← DNS name of primary podysql
 spec:
   clusterIP: None
   ports:
@@ -9,4 +9,4 @@ spec:
       name: mysql
   selector:
     app: mysql
-    role: replica
+    role: primary

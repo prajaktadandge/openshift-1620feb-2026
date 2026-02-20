@@ -240,7 +240,8 @@ oc get pods
 cat allow-traffic-from-external.yml
 
 oc apply -f allow-traffic-from-external.yml
-oc get networkpolicy
+oc get baselineadminnetworkpolicy
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a76fc8e6-d2e7-4f1d-a377-8e27c1ffab7d" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/ac4d828b-032e-428e-b32b-e7349d4d9600" />
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/04fd1c1c-6cfa-47b4-bc53-978defdf35df" />
